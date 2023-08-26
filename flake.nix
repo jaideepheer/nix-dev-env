@@ -13,6 +13,7 @@
         devShells.default = pkgs.mkShell {
           buildInputs = [
             pkgs.rnix-lsp
+            gnome.gedit
           ];
         };
       }
