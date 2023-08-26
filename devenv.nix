@@ -1,12 +1,10 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   # https://devenv.sh/basics/
   env.GREET = "devenv";
 
   # https://devenv.sh/packages/
   packages = [
-    # Language server for Nix support in VSCode 
+    # Language server for Nix support in VSCode
     pkgs.rnix-lsp
 
     # Sample GUI program, run using command: xeyes
@@ -26,7 +24,6 @@
 
   # https://devenv.sh/pre-commit-hooks/
   pre-commit.hooks.deadnix.enable = true;
-  pre-commit.hooks.alejandra.enable = true;
 
   # https://devenv.sh/processes/
   # processes.ping.exec = "ping example.com";
