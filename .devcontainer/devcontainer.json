@@ -41,8 +41,12 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"onCreateCommand": "sudo nix profile install nixpkgs#cachix && sudo cachix use devenv && sudo nix profile install --accept-flake-config tarball+https://install.devenv.sh/latest"
-	
+	"onCreateCommand": {
+		"devenv_hook_bash":"echo 'eval \"$(direnv hook bash)\"' >> ~/.bashrc",
+		"devenv_hook_zsh":"echo 'eval \"$(direnv hook zsh)\"' >> ~/.zshrc",
+		"devenv": "sudo nix profile install nixpkgs#cachix && sudo cachix use devenv && sudo nix profile install --accept-flake-config tarball+https://install.devenv.sh/latest && devenv ci"
+	}
+
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
 }
