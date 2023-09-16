@@ -15,4 +15,6 @@
         ".direnv": true
     },
     "nix.enableLanguageServer": true,
+    "nixEnvSelector.nixFile": "${workspaceRoot}/devenv.nix",
+    "files.eol": "\n"
 }
