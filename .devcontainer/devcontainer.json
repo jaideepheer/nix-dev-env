@@ -32,7 +32,8 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"pinage404.nix-extension-pack"
+				"pinage404.nix-extension-pack",
+				"mkhl.direnv"
 			]
 		}
 	},
