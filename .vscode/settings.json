@@ -11,8 +11,8 @@
         "**/.settings": true,
         "**/.factorypath": true,
         ".pre-commit-config.yaml": true,
-        ".devenv*": true,
-        ".direnv": true
+        "**/.devenv*": true,
+        "**/.direnv": true
     },
     "nix.enableLanguageServer": true,
     "nixEnvSelector.nixFile": "${workspaceRoot}/devenv.nix",
